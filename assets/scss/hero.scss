@@ -1,0 +1,139 @@
+// -------------HERO--------------//
+
+#hero,
+#heroBody:before {
+    width: 100%;
+    @include heroBg ($primary, $secondary, .2, $heroImage);
+    height: 100vh!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+// --------HERO BODY-----------//
+
+#heroBody {
+    width: 74.5%;
+    clip-path: polygon(72% 0, 100% 0, 100% 100%, 9% 100%);
+    overflow: hidden;
+    display: flex;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+
+#heroBody:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(15px);
+    box-shadow: 10px 20px 5px 10px #555;
+}
+
+// --------HERO TITLE-----------//
+#heroTitle {
+    position: absolute;
+    align-self: center;
+    color: $textColor;
+    padding-left: 200px;
+}
+
+#heroTitle {
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        text-align: right;
+        letter-spacing: 6px;
+        line-height: 7rem;
+    }
+}
+
+#heroTitle h1 span {
+    font-size: 9.75rem;
+    font-weight: 700;
+}
+
+.primary {
+    color: $primary;
+}
+
+// -----------HERO SUBTITLE----------//
+#heroSubtitle {
+    position: absolute;
+    bottom: 200px;
+    width: 55%;
+    height: 84px;
+    clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#heroSubtitle h2 {
+    color: $primary;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 40px;
+    margin: 0;
+}
+
+// --------HERO PARAGRAPH-------------//
+.hero-paragraph {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-paragraph p {
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 150px;
+    padding-left: 400px;
+}
+
+// ---------SMALL SCREEN SUBTITLE AND PARAGRAPH---------//
+#heroSubtitleSmall {
+    width: 50%;
+    height: 50px;
+    background: white;
+    position: absolute;
+    bottom: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroSubtitleSmall h2 {
+    color: $primary;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 10px;
+    margin: 0;
+    z-index: 10;
+}
+
+.hero-paragraph-sm {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-paragraph-sm p {
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    bottom: 130px;
+}
+
+.medium {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
